@@ -1,0 +1,51 @@
+#from R Studio tutorial videos 
+
+#concatenate function
+  #assigns a vector to a specific object
+    #if new variable name is myvariable
+
+myvariable <-c(72,28,-9,12,11)
+
+#if you use myvariable with function such as sqrt() you will get nan = not a number 
+  #cannot get sqrt of negative number
+  
+
+#IMPORTING A DATAFRAME 
+#dataframe = matrix
+
+#make sure excel file is saved as csv
+#double check number of rows
+
+mean(EPSA15_CSV$oil.round.)
+#this will retreive the mean for the variable oil.round. in the dataset EPSA15_CSV
+
+#frequency table/count
+table(EPSA15_CSV$Low.Income)
+
+#when indexing a dataframe remember: row first, column second
+EPSA15_CSV[2,5]
+
+#table function to get counts of a categorical variable
+table(EPSA15_CSV$Low.Income)
+
+#indexing/logical statement
+EPSA15_CSV$Love,Income == '1'
+  #will give out TRUE FALSA statements
+  
+lowincome <- EPSA15_CSV[EPSA15_CSV$Low.Income == '1',]
+  #will give you the number of cases for all values classified as low income in data
+  #note: lowincome is a new variable name
+
+lowGDP<-EPSA15_CSV$GDP.Round.[EPSA15_CSV$Low.Income= '1']
+  #vector. here you are looking at the GDP for the low income countries.
+  #makeing a new variable lowGDP
+  #there are no commas after one because you are pulling out a specific variable and indexing it
+  
+mean(lowGDP)
+#you should get the mean if the new variable.  GDP of all countries classified as low income
+
+#For every single case in column 5
+EPSA15_CSV[,5]
+
+
+
